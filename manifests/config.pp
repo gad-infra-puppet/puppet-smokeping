@@ -85,6 +85,13 @@ class smokeping::config {
               group => www-data,
               mode  => '0640',
           }
+
+          concat::fragment { "${smokeping::slave_secrets}-sample":
+              target  => $smokeping::slave_secrets,
+              order   => 1,
+              content => "*** sample secrets ***\nsample-host:mysercert\n\n\n"
+          }  
+
           Concat::Fragment <<| tag == "smokeping-slave-secret" |>>
 
           #create target definitions

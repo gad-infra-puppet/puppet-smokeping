@@ -5,5 +5,14 @@
 <% probes.each do |probe| -%>
 + <%= probe['name'] %>
 binary = <%= probe['binary'] %>
+<% if probe['forks']  -%>
+forks = <%= probe['forks'] %>
+<% end -%>
+<% if probe['offset']  -%>
+offset = <%= probe['offset'] %>
+<% end -%>
+<% if probe['step']  -%>
+step = <%= probe['step'] %>
+<% end -%>
 
 <% end -%>
