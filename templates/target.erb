@@ -12,6 +12,12 @@ title = <%= menu %>
 <% if host != '' then -%>
 host = <%= host %>
 <% end -%>
+<% if port -%>
+port = <%= port %>
+<% end -%>
+<% if url -%>
+url = <%= url %>
+<% end -%>
 <% if alerts != [] then -%>
 alerts = <%= alerts.join(',') %>
 <% end -%>
