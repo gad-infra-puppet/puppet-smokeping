@@ -16,7 +16,7 @@ host = <%= host %>
 port = <%= port %>
 <% end -%>
 <% if url -%>
-url = <%= url %>
+url = '<%= url %>'
 <% end -%>
 <% if alerts != [] then -%>
 alerts = <%= alerts.join(',') %>
